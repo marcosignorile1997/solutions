@@ -1,5 +1,16 @@
 <x-layout>
 <br>   
+@if ($errors->any())
+<div class="grid md:grid-cols-2 md:gap-6">
+    <div class="relative z-0 w-full mb-5 group">
+        @foreach ($errors->all() as $error)
+            <div>
+                <p id="filled_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400"><span class="font-medium"></span> {{ $error }}</p>
+            </div>
+        @endforeach
+    </div>
+</div>
+@endif
 <form action="{{route('homepage_store')}}" method="POST" enctype="multipart/form-data" class="max-w-md mx-auto">
 @method('POST')
 @csrf
