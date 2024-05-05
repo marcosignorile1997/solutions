@@ -12,6 +12,7 @@ class contact extends Model
         'name',
         'email',
         'oggetto',
+        'assistenza',
         'image'
     
     ];

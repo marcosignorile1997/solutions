@@ -30,10 +30,10 @@ class HomepageController extends Controller
             'name' => $request-> name,
             'email' => $request-> email,
             'oggetto'=>$request-> oggetto,
+            'assistenza'=>$request-> assistenza,
             'image'=>$path_image
         ]);
 
-        //$contact->categories()->attach($request-> categories);
         return redirect()->route('homepage')->with('success', 'Creazione avvenuta con successo!');
     }
     //

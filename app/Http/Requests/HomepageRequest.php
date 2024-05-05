@@ -26,6 +26,7 @@ class HomepageRequest extends FormRequest
             "name" => "required|string|max:255|min:2",
             "email" => "required|string",
             "oggetto" => "required|string",
+            "assistenza"=>"required|string|max:255|min:10",
             "image"=> "mimes:bmp,png,jpeg,webpl,jpg"
         ];
     }
